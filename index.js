@@ -215,8 +215,21 @@ function getBIHData(data){
 // console.log(getBIHData(fifaData))
 
 /* If you still have time, use the space below to work on any stretch goals of your chosing as listed in the README file. */
-
-
+// the only stretch that would not put me to sleep:
+function convertToHtml(data){ // function converts country to <h1> tags 
+const countries = {}
+data.forEach((val)=>{
+    let homeName = val['Home Team Name']
+    let awayName = val['Away Team Name']
+    if(!countries[homeName]) countries[homeName] = 0
+    if(!countries[awayName]) countries[awayName] = 0
+})
+let Html = []
+    for(let i in countries){
+        Html.push(`<h1> ${i} </h1>`)
+    }
+    return Html
+}
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
     console.log('its working');
