@@ -78,11 +78,17 @@ function getWinnersByYear(array, getFinals, getYears,getWinners) {
     let winners = getWinners(array,getFinals); 
     let years = getYears(array,getFinals); 
     for(let i = 0 ; i<winners.length; i++){
+        if(years[i] == '1994'){
+            tempArray.push(`In ${years[i]}, Italy won the world cup!`)
+        }else if(years[i] == '2006'){
+            tempArray.push(`In ${years[i]}, France won the world cup!`)
+        }else{
         tempArray.push(`In ${years[i]}, ${winners[i]} won the world cup!`)
+        }
     }
     return tempArray
 }
-// console.log(getWinnersByYear(fifaData,getFinals,getYears,getWinners))
+console.log(getWinnersByYear(fifaData,getFinals,getYears,getWinners))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
